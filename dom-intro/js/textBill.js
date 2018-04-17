@@ -42,21 +42,16 @@ var callElem = document.querySelector(".callTotalOne");
 var smsElem= document.querySelector(".smsTotalOne");
 //get a reference to the add button
 var calculate = document.querySelector(".addToBillBtn");
-
+var billString = billTxt.value;
+var functionCall = factoryTextBill(billString);
 //create a variable that will keep track( of the total bill
 var totalCostElem = document.querySelector(".totalOne");
-var callFactoryFunction = factoryTextBill()
-//add an event listener for when the add button is pressed
 calculate.addEventListener("click", function(){
-  //Initialise billTxt
-  var billString = billTxt.value;
-//  var totalCost = new factoryTextBill(billString);
 
-  //Initialise all the labels with call and sms total
-  callElem.innerHTML = callFactoryFunction.call();
-  smsElem.innerHTML = callFactoryFunction.sms();
+  callElem.innerHTML = functionCall.call();
+  smsElem.innerHTML = functionCall.sms();
   //initialise total amount with totalBill reference
-  totalCostElem.innerHTML = callFactoryFunction.grandTotal();
+  totalCostElem.innerHTML = functionCall.grandTotal();
 
   // //Add danger if total Cost is greater than or Equal to R50
   // if(totalCost >= 30){
