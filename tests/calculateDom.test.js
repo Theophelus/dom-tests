@@ -1,5 +1,5 @@
 //Writing tests for calculate Bill function
-describe('calculate Bill', function(){
+describe('calculate Bill wiget tests', function(){
   it('should return amount of a call if its only one call', function(){
     assert.equal(totalPhoneBill('call'),'2.75');
   });
