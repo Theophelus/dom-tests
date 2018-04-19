@@ -1,13 +1,13 @@
 describe('Bill With Settings Widget Tests', function(){
   it('should return call cost', function(){
     var newUpdateSettings = UpdateSettings();
-    newUpdateSettings.callSettingsFunc(1);
-    assert.equal('1', newUpdateSettings.returnCallSettings());
+    newUpdateSettings.callSettingsFunc(2.75);
+    assert.equal('2.75', newUpdateSettings.returnCallSettings());
   });
   it('should return sms cost', function(){
     var newUpdateSettings = UpdateSettings();
-    newUpdateSettings.smsSettingsFunc(1);
-    assert.equal('1', newUpdateSettings.returnSmsSettings());
+    newUpdateSettings.smsSettingsFunc(.75);
+    assert.equal('.75', newUpdateSettings.returnSmsSettings());
   });
 
   it('should return call total if call radio button is checked and update total', function(){
@@ -26,5 +26,5 @@ describe('Bill With Settings Widget Tests', function(){
     newBillSettings.radSmsFunc('sms');
     assert.equal('', newBillSettings.settingsTotal());
   });
-
+  it('should return nothing if both radio buttons are not checked');
 });

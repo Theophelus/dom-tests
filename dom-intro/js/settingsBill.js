@@ -135,12 +135,12 @@ addElem.addEventListener("click", function(){
   totalAll = newBillSettings.returnCall() + newBillSettings.returnSms();
   totalElem.innerHTML = totalAll.toFixed(2);
 
-  if(totalAll >= criticalTotal){
-    totalElem.classList.add("danger");
-    addElem.disabled = true;
-  }
-
-  else if(totalAll >= warningLevelTotal ){
-    totalElem.classList.add("warning");
-  }
+  // if(totalAll >= criticalTotal){
+  //   totalElem.classList.add("danger");
+  //   addElem.disabled = true;
+  // }
+  //
+  // else if(totalAll >= warningLevelTotal ){
+  //   totalElem.classList.add("warning");
+  // }
 });
